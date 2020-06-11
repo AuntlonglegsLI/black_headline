@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { sendCode, login } from '@/utils/api.js'
+import { sendCode, login } from '../../utils/api'
 export default {
   name: "LoginPage",
   components: {},

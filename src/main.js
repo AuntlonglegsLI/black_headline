@@ -9,6 +9,9 @@ import "./styles/index.less"
 // 使用 [amfe-flexible] 动态设置 REM 基准值（html 标签的字体大小）
 import 'amfe-flexible'
 
+// 引入 dayjs 过滤器
+import './utils/day'
+
 // 按需注册 Vant 组件
 import "./utils/register-vant.js";
 Vue.config.productionTip = false
