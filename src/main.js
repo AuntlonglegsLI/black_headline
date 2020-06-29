@@ -3,21 +3,22 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// 引入less样式文件
-import "./styles/index.less"
+// 注册 Vant 组件
+import './util/register'
 
-// 使用 [amfe-flexible] 动态设置 REM 基准值（html 标签的字体大小）
+// 引入公共样式
+import './styles/index.less'
+
+// 引入 REM 适配
 import 'amfe-flexible'
 
 // 引入 dayjs 过滤器
-import './utils/day'
+import './util/dayjs'
 
-// 按需注册 Vant 组件
-import "./utils/register-vant.js";
-Vue.config.productionTip = false
-
-import request from './utils/request'
+import request from './util/request'
 Vue.prototype.$axios = request
+
+Vue.config.productionTip = false
 
 new Vue({
   router,
