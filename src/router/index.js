@@ -32,8 +32,16 @@ const routes = [
         meta: {
           mustLogin: true   // 这个页面必须登录才能访问
         }
-      }
+      },
+      {
+        path: 'search',
+        component: () => import('../views/search/Index.vue')
+      },
     ]
+  },
+  {
+    path: '/search/:q',
+    component: () => import('../views/searchResult/Index.vue')
   },
   {
     path: '/login',

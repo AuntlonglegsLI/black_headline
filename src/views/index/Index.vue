@@ -2,7 +2,7 @@
   <div class="index">
     <!-- 搜索框 -->
     <van-nav-bar fixed placeholder class="index-navbar">
-      <van-button plain type="info" slot="title" icon="search">搜索</van-button>
+      <van-button plain type="info" slot="title" icon="search" @click="$router.push('/search')">搜索</van-button>
     </van-nav-bar>
     <!-- 推荐频道 -->
     <van-tabs sticky :offset-top="46" v-model="active">

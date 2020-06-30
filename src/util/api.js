@@ -2,17 +2,38 @@ import request from './request'
 
 // 调用搜索接口
 export const search = (keywords) => {
-  return request.get('/v1_0/search?q='+keywords)
+  return request.get('/v1_0/search?q=' + keywords)
 }
+
+// 调用联想建议
+export const suggestion = (keywords) => {
+  return request.get('/v1_0/suggestion?q=' + keywords)
+}
+
+// 获取搜索结果
+export const getSearchResult = (params) => {
+  let page = params.page
+  let per_page = params.per_page
+  let q = params.q
+  return request.get(`/v1_0/search?page=${page}&per_page=${per_page}&q=${q}`)
+}
+
+// 获取用户搜索历史
+// export const getSearchHistory = (params) => {
+//   let page = params.page
+//   let per_page = params.per_page
+//   let q = params.q
+//   return request.get(`/v1_0/search?page=${page}&per_page=${per_page}&q=${q}`)
+// }
 
 // 发送验证码
 export const sendCode = (mobile) => {
-  return request.get('/v1_0/sms/codes/'+mobile)
+  return request.get('/v1_0/sms/codes/' + mobile)
 }
 
 // 登录
 export const login = (mobile, code) => {
-  return request.post('/v1_0/authorizations', {mobile, code})
+  return request.post('/v1_0/authorizations', { mobile, code })
 }
 
 // 获取全部新闻频道
@@ -48,7 +69,7 @@ export const getArticleById = artId => {
 // 关注作者
 export const followById = userId => {
   // 在 body 中传参数
-  return request.post('/v1_0/user/followings', {target: userId})
+  return request.post('/v1_0/user/followings', { target: userId })
 }
 
 // 取消关注作者

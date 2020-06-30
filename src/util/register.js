@@ -27,7 +27,8 @@ import {
   Uploader,
   RadioGroup,
   Radio,
-  Picker
+  Picker,
+  Search
 } from 'vant'
 
 Vue.use(Button)
@@ -55,6 +56,7 @@ Vue.use(Button)
   .use(RadioGroup)
   .use(Radio)
   .use(Picker)
+  .use(Search)
 
 Vue.use(Lazyload, {
   lazyComponent: true

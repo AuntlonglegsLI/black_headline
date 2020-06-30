@@ -14,3 +14,9 @@
     </van-tabbar>
   </div>
 </template>
+
+<style lang="less" scoped>
+.tabbar{
+  height: 100%;
+}
+</style>
